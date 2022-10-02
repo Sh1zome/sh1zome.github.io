@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Справочник по теме "Множество чисел"</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../parsejson.css">
+</head>
+<body>
+    <div id="tag-title">math</div>
+    <div id="page-title">Справочник "Множество чисел"</div>
+    <main id="head">
+        <div class="icon"></div>
+        <div>
+            <h1>Справочный материал:</h1>
+            <ul style="margin-bottom: 0">
+                <a href="#section1"><li>Множество чисел</li></a>
+                <a href="#section2"><li>Виды множеств чисел</li></a>
+                <a href="#section3"><li>О странице</li></a>
+            </ul>
+        </div>
+    </main>
+    <header id="header">
+        <a href="#head" id="scroll">
+            <span></span>
+        </a>
+        <h1>Справочник "Множество чисел"</h1>
+    </header>
+    <div class="section" id="section1">
+        <div class="title">
+            <h1 style="border-top: 0; padding-top: 0; margin-bottom: 0">Множество чисел</h1>
+        </div>
+        <h1 style="border: none; padding-top: 0">Что такое множество?</h1>
+        <p><strong>Множество</strong> — это набор каких-либо объектов. Объекты, из которых состоит множество, называются элементами этого множества.</p>
+        <p><i>Например: множество школьников, множество машин, множество чисел.</i></p>
+        <p>В математике множество рассматривается намного шире.</p>
+        <h1>Обозначения</h1>
+        <p>Множество чаще всего обозначают заглавными буквами латинского алфавита, а его элементы — строчными. При этом элементы заключаются в фигурные скобки.</p>
+        <p><i>Например: F = {1, 2, 3, 4}</i><br><br>В данном примере, дано множество F, элементами которого являются числа 1, 2, 3 и 4</p>
+        <p>Если какой-то элемент принадлежит заданному множеству, то эта принадлежность указывается с помощью знака принадлежности ∈.</p>
+        <p><i>Например: 2 ∈ F</i></p>
+        <p>Если какой-то элемент не принадлежит заданному множеству, то эта не принадлежность указывается с помощью зачёркнутого знака принадлежности ∉.</p>
+        <p><i>Например: 5 ∉ D</i></p>
+    </div>
+
+    <div class="section" id="section2">
+        <div class="title">
+            <h1 style="border-top: 0; padding-top: 0; margin-bottom: 0">Виды множеств чисел</h1>
+        </div>
+        <div class="urls">
+            <a href="integers.html"><span>\(N = \{{1}, {2}, {3}...\}\)</span><br><br>Множество натуральных чисел</a>
+            <a href="whole.html"><span>\(Z = \{{-1}, {0}, {1}...\}\)</span><br><br>Множество целых чисел</a>
+            <a href="rational.html"><span>\(Q = \{{1 \over 2}, {2 \over 2}, {3 \over 2}...\}\)</span><br><br>Множество рациональных чисел</a>
+            <a href="real.html"><span>\(R = \{{1 \over 2}, {\sqrt{2}}, {\pi}...\}\)</span><br><br>Множество действительных чисел</a>
+            <a href="complex.html"><span>\(C = \{a + bi\}\)</span><br><br>Множество комплексных чисел</a>
+            <a href="irrational.html"><span>\(I = \{{\sqrt{5}}, {\sqrt{2}}, {\pi}...\}\}\)</span><br><br>Множество иррациональных чисел</a>
+        </div>
+    </div>
+
+    <div class="section" id="section3">
+        <div class="title">
+            <h1 style="border-top: 0; padding-top: 0; margin-bottom: 0">О странице</h1>
+        </div>
+        <p style="border: none; padding-top: 0;">Данная страница выполнена студентами колледжа IThub-Ekat данными лицами 1 курса:</p>
+        <ul class="authors">
+            <a href="https://web.it-college.ru/i21s592/"><li>Садовников Артём</li></a>
+            <a href="https://web.it-college.ru/i21s588/"><li>Литвинцев Адриан</li></a>
+        </ul>
+        <p class="end" style="border: none;"></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 500, function(){
+        
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+</body>
+</html>

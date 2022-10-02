@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Справочник по теме "Теорема Пифагора"</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../parsejson.css">
+</head>
+<body>
+    <div id="tag-title">math</div>
+    <div id="page-title">Справочник "Теорема Пифагора"</div>
+    <main id="head">
+        <div class="icon"></div>
+        <div>
+            <h1>Справочный материал:</h1>
+            <ul style="margin-bottom: 0">
+                <a href="#section1"><li>Теорема Пифагора</li></a>
+                <a href="#section2"><li>Доказательства теоремы Пифагора</li></a>
+                <a href="#section3"><li>О странице</li></a>
+            </ul>
+        </div>
+    </main>
+    <header id="header">
+        <a href="#head" id="scroll">
+            <span></span>
+        </a>
+        <h1>Справочник "Теорема Пифагора"</h1>
+    </header>
+    <div class="section" id="section1">
+        <div class="title">
+            <h1 style="border-top: 0; padding-top: 0; margin-bottom: 0">Теорема Пифагора</h1>
+        </div>
+        <h1 style="border: none; padding-top: 0">Основные понятия</h1>
+        <p><strong>Теорема Пифагора</strong> — в прямоугольном треугольнике квадрат длины гипотенузы равен сумме квадратов длин катетов.</p>
+        <p><strong>Гипотенуза</strong> — сторона, лежащая напротив прямого угла.</p>
+        <p><strong>Катет</strong> — одна из двух сторон, образующих прямой угол.</p>
+        <h1>Формула Теоремы Пифагора</h1>
+        <p>\(a^2 + b^2 = c^2\)</p>
+        <p>a, b — катеты, с — гипотенуза.</p>
+        <p>Из этой формулы можно вывести следующее:</p>
+        <p>1. \(a = {\sqrt{с^2 - b^2}}\)</p>
+        <p>2. \(b = {\sqrt{с^2 - a^2}}\)</p>
+        <p>3. \(c = {\sqrt{a^2 - b^2}}\)</p>
+        <p>Для треугольника со сторонами a, b и c, где c — большая сторона, действуют следующие правила:</p>
+        <p>1. если \(c^2 < a^2 + b^2\), значит угол, противолежащий стороне c, является острым.</p>
+        <p>2. если \(c^2 = a^2 + b^2\), значит угол, противолежащий стороне c, является прямым.</p>
+        <p>3. если \(c^2 > a^2 + b^2\), значит угол, противолежащий стороне c, является тупым.</p>
+    </div>
+
+    <div class="section" id="section2">
+        <div class="title">
+            <h1 style="border-top: 0; padding-top: 0; margin-bottom: 0">Доказательства теоремы Пифагора</h1>
+        </div>
+        <div class="urls">
+            <a href="d1.html">Доказательство №1</a>
+            <a href="d2.html">Доказательство №2</a>
+        </div>
+    </div>
+
+    <div class="section" id="section3">
+        <div class="title">
+            <h1 style="border-top: 0; padding-top: 0; margin-bottom: 0">О странице</h1>
+        </div>
+        <p style="border: none; padding-top: 0;">Данная страница выполнена студентами колледжа IThub-Ekat данными лицами 1 курса:</p>
+        <ul class="authors">
+            <a href="https://web.it-college.ru/i21s592/"><li>Садовников Артём</li></a>
+            <a href="https://web.it-college.ru/i21s588/"><li>Литвинцев Адриан</li></a>
+            <a href="https://web.it-college.ru/i21s587/"><li>Олег Дрёмов</li></a>
+        </ul>
+        <p class="end" style="border: none;"></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 500, function(){
+        
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+</body>
+</html>

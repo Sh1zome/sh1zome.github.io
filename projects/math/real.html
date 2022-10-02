@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Справочник по теме "Множество чисел"</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <main id="head">
+        <div class="icon"></div>
+        <div>
+            <h1>Множество действительных чисел</h1>
+            <h1>\(R = \{{1 \over 2}, {\sqrt{2}}, {\pi}...\}\)</h1>
+            <ul>
+                <a href="index.html"><li>Назад</li></a>
+            </ul>
+        </div>
+    </main>
+    <header id="header">
+        <a href="#head" id="scroll">
+            <span></span>
+        </a>
+        <h1>Справочник "Множество чисел"</h1>
+    </header>
+    <div class="section" id="section1">
+      <div class="title">
+          <h1 style="border-top: 0; padding-top: 0; margin-bottom: 0">Множество действительных чисел</h1>
+      </div>
+      <h1 style="border: none; padding-top: 0">Что такое множество действительных чисел?</h1>
+      <p>На числовой прямой, которую мы рассмотрели в связи с множеством целых чисел, могут быть точки, не имеющие координат в виде рационального числа. Так, не существует рационального числа, квадрат которого равен 2. Следовательно, число √2 не является рациональным числом. Так же не существует рациональных чисел, квадраты которых равны 5, 7, 9. Следовательно, иррациональными являются числа √5, √7, √10. Иррациональным является и число \(\pi\)</p>
+      <p>Никакое иррациональное число не может быть представлено в виде периодической дроби. Их представляют в виде непериодических дробей.</p>
+      <p>Объединение множеств рациональных и иррациональных чисел представляет собой множество действительных чисел <strong>R</strong></p>
+      <h1>Аксиомы о действиях над действительными числами</h1>
+      <p><strong>Аксиомы сложения.</strong> Для любых a, b, c из множества R действительных чисел справедливы следующие свойства:
+      <br><br>I. a + b = b + a.<br><br>II. (a + b) + c = a + (b + c).<br><br>III. a + 0 = a.<br><br>
+      IV. Для любого a ∈ R существует такое число b ∈ R, что a + b = 0. Это число b называется противоположным числу a и обозначается - a.
+      <br><br>Аксиома IV позволяет ввести операцию вычитания в множестве действительных чисел: под разностью a - b понимается сумма a + (- b).</p>
+      <p><strong>Аксиомы умножения.</strong> Для любых a, b, c из множества R действительных чисел справедливы следующие свойства:
+      <br><br>V. ab = ba.<br><br>VI. (ab)c = a(bc).<br><br>VII. a*1 = a.<br><br>VIII. Для любого отличного от нуля числа a ∈ R существует такое число b ∈ R, что ab = 1. Это число b называется обратным числу a и обозначается \(1 \over a\).
+      <br><br>IX. (a + b)c = ac + bc.
+      <br><br>Аксиома VIII позволяет ввести операцию деления в множестве действительных чисел: под \(a \over b \) понимается произведение \( a * {1 \over b} \), где b ≠ 0.</p>
+      <p><strong>Аксиома Архимеда.</strong> Для любых положительных действительных чисел a и b существует такое натуральное число n, что na > b.</p>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 500, function(){
+        
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+</body>
+</html>

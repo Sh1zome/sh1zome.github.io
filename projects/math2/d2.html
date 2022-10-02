@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Справочник по теме "Теорема Пифагора"</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <main id="head">
+        <div class="icon"></div>
+        <div>
+            <h1>Теорема Пифагора</h1>
+            <h1>Доказательство №2</h1>
+            <ul>
+                <a href="index.html"><li>Назад</li></a>
+            </ul>
+        </div>
+    </main>
+    <header id="header">
+        <a href="#head" id="scroll">
+            <span></span>
+        </a>
+        <h1>Справочник "Теорема Пифагора"</h1>
+    </header>
+    <div class="section" id="section1">
+      <div class="title"><h1 style="border-top: 0; padding-top: 0; margin-bottom: 0">Доказательство</h1>
+      </div>
+      <h1 style="border: none; padding-top: 0">К доказательству теоремы Пифагора</h1>
+      <p>Здесь \(a\) и \(b\) — катеты, а \(c\) — гипотенуза:</p>
+      <a class="image but" href="#img1">
+        <img src="img/d2(1).png">
+      </a>
+      <a href="#" class="image lightbox" id="img1">
+        <span style="background-image: url('img/d2(1).png')"></span>
+      </a>
+      <p>Сначала рассмотрим одну лемму — доказанное утверждение, которое полезно не само по себе, а для доказательства других утверждений (теорем).</p>
+      <p>Возьмем прямоугольный треугольник с вершинами \(X\), \(Y\) и \(Z\), где \(Z\) — прямой угол и опустим перпендикуляр с прямого угла \(Z\) на гипотенузу. Здесь \(W\) — точка, в которой высота пересекается с гипотенузой.</p> 
+      <a class="image but" href="#img2">
+        <img src="img/d2(2).png">
+      </a>
+      <a href="#" class="image lightbox" id="img2">
+        <span style="background-image: url('img/d2(2).png')"></span>
+      </a>
+      <p>Эта линия (перпендикуляр) \(ZW\) разбивает треугольник на подобные копии самого себя.</p>
+      <p>Подобными называются треугольники, углы у которых соответственно равны, а стороны одного треугольника пропорциональны сходственным сторонам другого треугольника.</p>
+      <p>В нашем примере образовавшиеся треугольники \(XWZ\) и \(YWZ\) подобны друг другу и также подобны исходному треугольнику \(XYZ\).</p>
+      <p>Вернемся к теореме Пифагора.</p>
+      <h1>Доказательство:</h1>
+      <a class="image but" href="#img3">
+        <img src="img/d2(3).png">
+      </a>
+      <a href="#" class="image lightbox" id="img3">
+        <span style="background-image: url('img/d2(3).png')"></span>
+      </a>
+      <p>Опустим перпендикуляр на гипотенузу \(c\). В результате у нас образовались два прямогульных треугольника внутри нашего прямоугольного треугольника. Обозначим эти треугольники (на картинке вверху зеленым цветом) буквами \(A\) и \(B\), а исходный треугольник — буквой \(C\).</p>
+      <p>Разумеется, площадь треугольника \(C\) равна сумме площадей треугольников \(A\) и \(B\).</p>
+      <p>Т.е. \( A + B = C \)</p>
+      <p>Теперь разобьем фигуру вверху на три фигурки-домика:</p>
+      <a class="image but" href="#img4">
+        <img src="img/d2(4).png">
+      </a>
+      <a href="#" class="image lightbox" id="img4">
+        <span style="background-image: url('img/d2(4).png')"></span>
+      </a>
+      <p>Как мы уже знаем из леммы, треугольники \( A \), \( B \) и \( C \) подобны друг другу, поэтому и образовавшиеся фигурки-домики также подобны и являются масштабированными версиями друг друга.</p>
+      <p>Это означает, что соотношение площадей \(A\) и \(a^2\), — это то же самое, что отношение площадей \(B\) и \(b^2\), а также \(C\) и \(c^2\).</p>
+      <p>Таким образом, мы имеем \({A \over a^2} = {B \over b^2} = {C \over c^2}\).</p>
+      <p>Обозначим это соотношение площадей треугольника и квадрата в фигуре-домике буквой \(k\).</p>
+      <p>Т.е. \(k\) — это некий коэффициент, связывающий площадь треугольника (крыши домика) с площадью квадрата под ним:</p>
+      <p>\(k = {A \over a^2} = {B \over b^2} = {C \over c^2}\)</p>
+      <p>Из этого следует, что площади треугольников можно выразить через площади квадратов под ними таким образом:</p>
+      <p>\(A = ka^2\), \(B = kb^2\), и \(C = kc^2\)</p>
+      <p>Но, мы помним, что \(A + B = C\), а значит, \(ka^2 + kb^2 = kc^2\)</p>
+      <p>Или \(a^2 + b^2 = c^2\)</p>
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 500, function(){
+        
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+</body>
+</html>

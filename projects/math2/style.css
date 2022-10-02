@@ -1,0 +1,406 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body p {
+    font-size: 18px;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 24px;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(https://cs8.pikabu.ru/post_img/big/2018/01/07/2/1515284419181398313.jpg);
+    color: white;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 -5px 5px rgba(0, 0, 0, 0.2);
+    height: 470px;
+}
+
+.icon {
+    background-image: url("icon.png");
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.6));
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    background-size: 100%;
+}
+
+main ul {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    color: white;
+}
+
+main ul li {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 30px;
+    border: 3px solid;
+    transition: 0.1s ease;
+    font-size: 18px;
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.6));
+}
+
+main div {
+    width: 300px;
+}
+
+main h1 {
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.6));
+    font-size: 25px;
+}
+
+a {
+    cursor: pointer;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+main ul li:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+header {
+    font-size: 10px;
+    opacity: 0;
+    display: flex;
+    width: calc(100% - 20px);
+    justify-content: center;
+    align-items: center;
+    background-color: #6683a0;
+    transition: 0.2s ease;
+    height: 0;
+}
+
+.sticky {
+    height: auto;
+    opacity: 1;
+    padding: 9px;
+    position: fixed;
+    font-size: 10px;
+    top: 0;
+    width: calc(100% - 18px);
+    z-index: 20;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+}
+
+.sticky + #header {
+    padding-top: 10px;
+}
+
+#scroll {
+    opacity: 0.6;
+    position:fixed;
+    right:15px;
+    bottom:15px;
+    cursor:pointer;
+    width:60px;
+    height:60px;
+    background-color:#214263;
+    border-radius:50%;
+    transition: 0.1s ease;
+}
+#scroll span {
+    cursor: pointer;
+    text-indent: -9999px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -16px;
+    margin-top: -24px;
+    height: 0;
+    width: 0;
+    border: 15px solid transparent;
+    border-bottom-color: white  ;
+}
+#scroll:hover {
+    opacity: 0.3;
+    filter:"alpha(opacity=100)";
+    -ms-filter:"alpha(opacity=100)";
+}
+
+i {
+    opacity: 0.8;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.title {
+    margin: -10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: auto;
+    padding: 42px 0;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #24486d;
+}
+
+body .section .title h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: #2b5580;
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+    height: 80px;
+}
+
+.section h1 {
+    margin-top: 0;
+    border-top: solid 2px rgba(93, 93, 128, 0.2);
+    padding-top: 15px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.section ul {
+    border-top: solid 2px rgba(93, 93, 128, 0.2);
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.section ul li {
+    margin: 2px 0;
+    margin-bottom: 17px;
+}
+
+.section .authors {
+    display: flex;
+    flex-direction: column;
+    border-top: none;
+    padding: 0;
+    margin: auto;
+    list-style: none;
+}
+
+.section .authors li {
+    text-align: center;
+    color: white;
+    align-self: center;
+    font-size: 25px;
+    margin: 0;
+}
+
+.section .authors a {
+    height: max-content;
+}
+
+.section p {
+    padding-top: 10px;
+    margin: 10px 0;
+    margin-top: 0;
+}
+
+.section .end {
+    height: 200px;
+}
+
+.section a:not(.image) {
+    text-align: center;
+    color: white;
+    align-self: center;
+    border-radius: 20px;
+    width: 240px;
+    padding: 20px 30px;
+    background-color: #336699;
+    transition: 0.1s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.section a:hover:not(.image) {
+    background-color: #24486d;
+}
+
+.section .but {
+    width: max-content;
+}
+
+.urls {
+    display: grid;
+    align-self: center;
+}
+
+.section img {
+    height: max-content;
+    width: 94vw;
+}
+
+.lightbox {
+    /* Default to hidden */
+    display: none;
+  
+    /* Overlay entire screen */
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    /* A bit of padding around image */
+    padding: 1em;
+  
+    /* Translucent background */
+    background: rgba(0, 0, 0, 0.8);
+}
+  
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
+    display: block;
+}
+
+.lightbox span {
+    /* Full width and height */
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    /* Size and position background image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media(min-width: 768px) {
+    
+    body .section .title h1 {
+        height: 50px;
+    }
+
+    main {
+        flex-direction: row;
+        gap: 40px;
+        justify-content: center;
+        height: 269px;
+    }
+
+    main div {
+        width: 380px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .title {
+        margin: -20px;
+        margin-bottom: 20px;
+    }
+
+    .urls {
+        grid-template-columns: 2fr 2fr;
+        column-gap: 40px;
+    }
+
+    .section h1 {
+        text-align: left;
+    }
+
+    .section .authors {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .section img {
+        height: max-content;
+        width: 50vw;
+    }
+}
+
+@media(min-width: 1024px) {
+    .section {
+        padding: 100px;
+    }
+
+    .title {
+        margin: -100px;
+        margin-bottom: 20px;
+    }
+
+    .urls {
+        grid-template-columns: 2fr 2fr;
+        column-gap: 40px;
+    }
+
+    .section img {
+        height: max-content;
+        width: 30vw;
+    }
+}
+
+@media(min-width: 1280px) {
+    .section {
+        padding: 125px;
+    }
+    .title {
+        margin: -125px;
+        margin-bottom: 20px;
+    }
+    .urls {
+        grid-template-columns: 2fr 2fr;
+        column-gap: 40px;
+    }
+
+    .section .authors {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .section img {
+        height: max-content;
+        width: 20vw;
+    }
+    
+}

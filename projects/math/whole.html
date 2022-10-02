@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Справочник по теме "Множество чисел"</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <main id="head">
+        <div class="icon"></div>
+        <div>
+            <h1>Множество целых чисел</h1>
+            <h1>\(Z = \{{-1}, {0}, {1}...\}\)</h1>
+            <ul>
+                <a href="index.html"><li>Назад</li></a>
+            </ul>
+        </div>
+    </main>
+    <header id="header">
+        <a href="#head" id="scroll">
+            <span></span>
+        </a>
+        <h1>Справочник "Множество чисел"</h1>
+    </header>
+<div class="section" id="section1">
+<div class="title"><h1 style="border-top: 0; padding-top: 0; margin-bottom: 0">Множество целых чисел</h1>
+</div>
+<h1 style="border: none; padding-top: 0"> Что такое множество целых чисел?</h1>
+<p>
+  Рассмотрим числовую прямую с началом отсчёта в точке O. Координатой числа нуль на ней будет точка O. Числа, расположенные на числовой прямой в заданном направлении, называют положительными числами. Пусть на числовой прямой задана точка A с координатой 3. Она соответствует положительному числу 3. Отложим теперь три раза единичный отрезок от точки O, в направлении, противоположном заданному. Тогда получим точку A', симметричную точке A относительно начала координат O. Координатой точки A' будет число - 3. Это число, противоположное числу 3. Числа, расположенные на числовой прямой в направлении, противоположном заданному, называют отрицательными числами.
+</p>
+<p> Числа, противоположные натуральным, образуют множество чисел N':<br><br> <i> N' = {- 1, - 2, - 3, - 4, ...}.</i></p>
+<p>Если объединить множества N, N' и одноэлементное множество {0}, то получим множество Z всех целых чисел:<br><br> <i>Z = {0} ∪ N ∪ N'.</i></p>
+ <p>Для целых чисел верны все перечисленные выше законы сложения и умножения, которые верны для натуральных чисел. Кроме того, добавляются следующие законы вычитания:<br><br> <i>a - b = a + (- b);<br><br>a + (- a) = 0.
+  
+  </i></p>
+</div>
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 500, function(){
+        
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Справочник по теме "Множество иррациональных чисел"</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <main id="head">
+        <div class="icon"></div>
+        <div>
+            <h1>Множество иррациональных чисел</h1>
+            <h1>\(Q = \{{1 \over 2}, {2 \over 2}, {3 \over 2}...\}\)</h1>
+            <ul>
+                <a href="index.html"><li>Назад</li></a>
+            </ul>
+        </div>
+    </main>
+    <header id="header">
+        <a href="#head" id="scroll">
+            <span></span>
+        </a>
+        <h1>Справочник "Множество иррациональных чисел"</h1>
+    </header>
+    <div class="section" id="section1">
+      <div class="title"><h1 style="border-top: 0; padding-top: 0; margin-bottom: 0">Множество иррациональных чисел</h1>
+      </div>
+      <h1 style="border: none; padding-top: 0"> Что такое множество иррациональных чисел?</h1>
+      <p><strong>Иррациональное число</strong>— это действительное число, которое невозможно выразить в форме деления двух целых чисел, то есть в рациональной дроби:<br><br><i>\( m \over n \)</i> <br><br>Оно может быть выражено в форме бесконечной непериодической десятичной дроби.</p>
+<p>Примеры иррациональных чисел:<br><br>π = 3,1415926...<br><br>√2 = 1,41421356...<br><br>e = 2,71828182…<br><br>√8 = 2.828427...<br><br>-√11= -3.31662…
+  </p>
+  <h1>Свойства иррациональных чисел</h1>
+    <p>- Результат суммы иррационального числа и рационального равен иррациональному числу;<br><br>- Результат умножения иррационального числа на любое рациональное число (≠ 0) равен иррациональному числу;<br><br>- Результат вычитания двух иррациональных чисел равен иррациональному числу или рациональному;<br><br>- Результат суммы или произведения двух иррациональных чисел равен рациональному или иррациональному, например: √2 * √8 = √16 = 4).</p>
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 500, function(){
+        
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Shizome's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612+Mono&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="loader-wrapper">
+        <div id="loader">
+            <div id="S">S</div>
+        </div>
+        
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+        
+    </div>
+    <div id="content">
+        <div class="menu">
+            <div class="btn-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="home" class="nav-btn">
+                <icon>home</icon><h2>Главная</h2>
+            </div>
+            <div id="projects" class="nav-btn">
+                <icon>work</icon><h2>Проекты</h2>
+            </div>
+            <!-- <div id="skills" class="nav-btn">
+                <icon>moving</icon><h2>Skills</h2>
+            </div>
+            <div id="about" class="nav-btn">
+                <icon>person</icon><h2>Обо мне</h2>
+            </div> -->
+            <logo></logo>
+        </div> 
+        <content id="home" class="nav-content chosed">
+            <h1><div>S</div><div>h</div><div>i</div><div>z</div><div>o</div><div>m</div><div>e</div><div id="_">_</div></h1>
+            <h1><div>S</div><div>а</div><div>д</div><div>о</div><div>в</div><div>н</div><div>и</div><div>к</div><div>о</div><div>в</div><div> </div><div>А</div><div>р</div><div>т</div><div>е</div><div>м</div></h1>
+            <p>Портфолио студента IT-Hub Ekat 2 курса</p>
+            <p>Full Stack разработчик</p>
+            <div id="social-media">
+                <a href="https://t.me/shizomech" target="_blank"><img src="./social_media/telegram.svg"></a>
+                <a href="https://github.com/Sh1zome" target="_blank"><img src="./social_media/github.svg"></a>
+                <a href="mailto: shizomech@gmail.com" target="_blank"><img src="./social_media/gmail.svg"></a>
+                <a href="https://discordapp.com/users/374117206197534721" target="_blank"><img src="./social_media/discord.svg"></a>
+                <a href="https://vk.com/shizomch" target="_blank"><img src="./social_media/vk.svg"></a>
+                <a href="https://twitter.com/Shizome1" target="_blank"><img src="./social_media/twitter.svg"></a>
+            </div>
+        </content>
+        <content id="projects" class="nav-content">
+            <h1>Фильтр<div id="_">_</div></h1>
+            <div id="tags">
+                <div class="tag-tile">Все</div></div>
+            <h1>Проекты</h1>
+            <div id="list">
+
+            </div>
+        </content>
+        <content id="skills" class="nav-content">
+
+        </content>
+        <content id="about" class="nav-content">
+
+        </content>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="projects_loader.js"></script>
+</body>
+</html>

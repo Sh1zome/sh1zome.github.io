@@ -1,0 +1,410 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+#loader-wrapper.display-none {
+  display: none;
+}
+
+.display-none {
+  display: none;
+}
+
+#content {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: rgba(59, 9, 124, 0.5215686275);
+}
+
+.menu {
+  z-index: 8;
+  font-family: "Ubuntu Mono", monospace;
+  position: fixed;
+  height: 100vh;
+  width: 70px;
+  overflow: hidden;
+  display: inline-block;
+  background: linear-gradient(-45deg, #bb1d6c, #00ecb9);
+  transition: 0.3s ease;
+}
+.menu div {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-left: 15px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.menu div:nth-child(1) {
+  display: block;
+}
+.menu div icon {
+  font-family: "Material Icons";
+  font-size: 30pt;
+  margin-right: 19px;
+  transition: 0.3s ease;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: -2px -2px 1px #dd006f;
+}
+.menu div:hover icon {
+  text-shadow: -3px -3px 1px #dd006f, 3px 3px 10px rgba(59, 9, 124, 0.6039215686);
+}
+.menu div:hover h2 {
+  text-shadow: -3px -3px 1px #dd006f, 3px 3px 10px rgba(59, 9, 124, 0.6039215686);
+}
+.menu div:hover span {
+  width: 100% !important;
+  box-shadow: -3px -3px 1px #dd006f, 1px 1px 5px rgba(59, 9, 124, 0.6039215686);
+}
+.menu div h2 {
+  white-space: nowrap;
+  width: 200px;
+  transition: 0.3s ease;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: -2px -2px 1px #dd006f;
+}
+.menu logo {
+  opacity: 0.2;
+  left: 10px;
+  bottom: 10px;
+  position: absolute;
+  background-size: contain;
+  background-image: url("./s.png");
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(-2px -2px 1px #06D2D5);
+}
+.menu.open {
+  padding-right: 10px;
+  width: 180px;
+  box-shadow: 0px 0px 100vw #3b097c, 0px 0px 20px #FF0380;
+}
+
+.btn-menu span {
+  display: block;
+  margin-top: 12px;
+  height: 3px;
+  background-color: #ffffff;
+  box-shadow: -2px -2px 1px #dd006f;
+  transition: 0.3s ease;
+}
+.btn-menu span:first-child {
+  width: 50%;
+}
+.btn-menu span:last-child {
+  width: 50%;
+  margin-left: auto;
+}
+
+content {
+  overflow: hidden;
+  display: block;
+  font-family: "Ubuntu Mono", monospace;
+  padding: 50px;
+  padding-right: 20px;
+  padding-left: 100px;
+  z-index: 1;
+}
+content h1 {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #00ECB7;
+}
+content h1 div {
+  display: inline;
+  transition: 0.3s ease;
+  cursor: default;
+}
+content h1 div:hover {
+  text-shadow: -2px -2px 1px #dd006f, 2px 2px 10px #00ECB7;
+}
+content p {
+  margin: 0;
+  margin-top: 20px;
+  color: #00ECB7;
+}
+content #_ {
+  display: inline;
+  z-index: -1;
+  -webkit-animation: 1s linear 0s infinite spark;
+          animation: 1s linear 0s infinite spark;
+}
+content.chosed {
+  -webkit-animation: 0.5s ease-in-out fadeToLeft;
+          animation: 0.5s ease-in-out fadeToLeft;
+}
+content#home #social-media {
+  margin-top: 20px;
+  display: inline-block;
+}
+content#home #social-media a {
+  display: inline;
+  height: 50px;
+  width: 50px;
+}
+content#home #social-media a img {
+  filter: invert(79%) sepia(47%) saturate(4773%) hue-rotate(117deg) brightness(103%) contrast(101%);
+  height: 50px;
+  width: 50px;
+  transition: 0.3s ease;
+}
+content#home #social-media a:hover img {
+  filter: invert(79%) sepia(47%) saturate(4773%) hue-rotate(117deg) brightness(103%) contrast(101%) drop-shadow(-2px -2px 1px #FF0380);
+}
+content#projects #list {
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: wrap;
+  min-width: 220px;
+  width: 100%;
+  height: calc(100vh - 190px);
+  display: inline-block;
+}
+content#projects #list::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+content#projects #list::-webkit-scrollbar-thumb {
+  background: #9529FF;
+}
+content#projects #list::-webkit-scrollbar-track {
+  background: #3B097C;
+}
+content#projects #list {
+  scrollbar-face-color: #9529FF;
+  scrollbar-track-color: #3B097C;
+}
+content#projects #list.active, content#projects #list.active .project-tile {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+content#projects #list .project-tile {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  border: 4px solid #3B097C;
+  width: 205px;
+  height: 150px;
+}
+content#projects #list .project-tile.display-none {
+  display: none;
+}
+content#projects #list .project-tile img {
+  width: 205px;
+  height: auto;
+}
+content#projects #list .project-tile.chosed {
+  -webkit-animation: 0.5s ease-in-out fadeToLeft;
+          animation: 0.5s ease-in-out fadeToLeft;
+}
+content#projects #list .project-tile #name {
+  text-align: center;
+  font-size: 15pt;
+  padding: 15px 0;
+  background: linear-gradient(0deg, #24064b, 85%, #9529FF);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  color: #00ECB7;
+  box-shadow: 0px -2px 8px #9529FF;
+}
+content#projects #list .project-tile #tag {
+  text-align: center;
+  font-size: 17pt;
+  position: absolute;
+  padding: 2px 10px;
+  border: 2px solid #06D2D5;
+  box-shadow: 0 0 20px black;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8823529412);
+  border-radius: 20px;
+  top: 5px;
+  right: 5px;
+}
+content#projects #tags {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 35px;
+  width: 100%;
+  display: inline-block;
+}
+content#projects #tags::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+content#projects #tags::-webkit-scrollbar-thumb {
+  background: #9529FF;
+}
+content#projects #tags::-webkit-scrollbar-track {
+  background: #3B097C;
+}
+content#projects #tags {
+  scrollbar-face-color: #9529FF;
+  scrollbar-track-color: #3B097C;
+}
+content#projects #tags.active, content#projects #tags.active .tag-tile {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+content#projects #tags .tag-tile {
+  cursor: pointer;
+  text-align: center;
+  font-size: 17pt;
+  margin-right: 20px;
+  display: inline-block;
+  position: relative;
+  padding: 2px 10px;
+  border: 2px solid #06D2D5;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8823529412);
+  border-radius: 20px;
+}
+
+@-webkit-keyframes fadeToLeft {
+  0% {
+    margin-left: 100px;
+    margin-right: -100px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    margin-right: 20px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeToLeft {
+  0% {
+    margin-left: 100px;
+    margin-right: -100px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    margin-right: 20px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes spark {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+}
+@keyframes spark {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+}
+#S {
+  margin: 0;
+  margin-top: 17px;
+  font-family: "B612 Mono", monospace;
+  font-size: 150px;
+  text-align: center;
+  z-index: 11;
+  position: absolute;
+  color: #00fbff;
+  mix-blend-mode: difference;
+}
+
+#loader {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: animloader28 1s linear infinite;
+          animation: animloader28 1s linear infinite;
+  z-index: 11;
+  position: relative;
+  margin: auto;
+  margin-top: calc(50vh - 75px);
+  cursor: default;
+}
+
+@-webkit-keyframes animloader28 {
+  0% {
+    box-shadow: -225px 0 #00fbff inset;
+  }
+  100% {
+    box-shadow: 150px 0 #00fbff inset;
+  }
+}
+
+@keyframes animloader28 {
+  0% {
+    box-shadow: -225px 0 #00fbff inset;
+  }
+  100% {
+    box-shadow: 150px 0 #00fbff inset;
+  }
+}
+.loaded #loader {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  overflow: hidden;
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  z-index: 2;
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+.loaded #loader-wrapper .loader-section.section-left {
+  transform: translateX(-100%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+  transform: translateX(100%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}/*# sourceMappingURL=style.css.map */
