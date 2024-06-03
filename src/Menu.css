@@ -1,0 +1,47 @@
+.name {
+  margin: auto;
+  text-align: center;
+}
+
+.subname {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+.hint {
+  margin: auto;
+  text-align: left;
+  padding: 10px;
+  min-width: 275px;
+  max-width: 650px;
+}
+
+.text {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.box {
+  margin: auto;
+  min-width: 275px;
+  width: 80vw;
+  max-width: 650px;
+  height: 60vh;
+  border: solid 4px white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.box .button-menu {
+  padding: 0 2px;
+}
+.box .button-menu-hovered {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}/*# sourceMappingURL=Menu.css.map */
