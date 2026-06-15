@@ -1,11 +1,16 @@
-import Menu from './Menu'
+import WebIndex from './Web';
+import Menu from './Menu/Menu'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
   return (
-    <>
-      <Menu></Menu>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<WebIndex/>} />
+        <Route path="/select" element={<Menu/>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -1,8 +1,8 @@
-import './Menu.css'
+import './Menu.scss'
 import MenuElements from './MenuElements'
 
 let buttons = document.querySelectorAll('.button-menu')
-let element : EventTarget
+let element : HTMLElement | null = null
 
 document.onmousemove = function (e) {
 	if (buttons.length == 0) {
@@ -53,7 +53,7 @@ document.addEventListener('keydown', function(event) {
 function Menu() {
 	return (
 		<>
-			<div className='text name'>GNU GRUB ShizOS version 2.04</div>
+			<div className='text name'>GNU GRUB ShizomeOS version 2.04</div>
 			<div className='text subname'>Select the system boot option</div>
 			<div className='text box'>
 				<MenuElements/>

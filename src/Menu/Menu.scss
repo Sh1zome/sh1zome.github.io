@@ -1,3 +1,7 @@
+body {
+  background-color: #000000;
+}
+
 .name {
   margin: auto;
   text-align: center;
@@ -36,12 +40,14 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+
+  .button-menu {
+    padding: 0 2px;
+  }
+
+  .button-menu-hovered {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
 }
-.box .button-menu {
-  padding: 0 2px;
-}
-.box .button-menu-hovered {
-  background-color: white;
-  color: black;
-  cursor: pointer;
-}/*# sourceMappingURL=Menu.css.map */
